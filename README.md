@@ -5,7 +5,7 @@ Leveraging [Overwolf's ESlint](https://github.com/overwolf/eslint-config-overwol
 
 ## Installation
 ```
-npm install --save-dev eslint eslint-config-overwolf-ts
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-overwolf eslint-config-overwolf-ts eslint-plugin-react
 ```
 
 ## Usage
