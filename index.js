@@ -22,15 +22,54 @@ module.exports = {
     '@typescript-eslint',
     'react',
   ],
-  'rules': {
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    /* Overwolf */
     '@typescript-eslint/indent': 'off', // disable indentation in favor of ours
-    '@typescript-eslint/no-explicit-any': 'off', // supporting client API, some signatures requires 'any'
     'no-invalid-this': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/491
     'no-undef': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/342
     'lines-between-class-members': [
       'error', 'always', {
         exceptAfterSingleLine: true,
       },
-    ], // overwolf (allow grouped members)
+    ], // allow grouped members
+    'new-cap': ['error', { 'capIsNew': false }],
+    'no-useless-constructor': 'off',
+    'comma-dangle': ['error', {
+      'arrays': 'always-multiline',
+      'objects': 'always-multiline',
+      'imports': 'only-multiline',
+      'exports': 'only-multiline',
+      'functions': 'never',
+    }],
+    'indent': [
+      'error', 2, {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+        ignoreComments: false,
+
+        CallExpression: {
+          arguments: 1,
+        },
+        FunctionDeclaration: {
+          body: 1,
+          parameters: 1,
+        },
+        FunctionExpression: {
+          body: 1,
+          parameters: 1,
+        },
+
+        // airbnb
+        ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
+      },
+    ],
   },
 };
