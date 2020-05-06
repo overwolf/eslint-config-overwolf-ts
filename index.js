@@ -11,16 +11,12 @@ module.exports = {
   'extends': ['overwolf', 'plugin:@typescript-eslint/recommended'],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
-    },
     'ecmaVersion': 2018,
     'sourceType': 'module',
     'project': './tsconfig.json',
   },
   'plugins': [
     '@typescript-eslint',
-    'react',
   ],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
@@ -66,9 +62,6 @@ module.exports = {
           body: 1,
           parameters: 1,
         },
-
-        // airbnb
-        ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
       },
     ],
   },
