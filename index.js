@@ -33,36 +33,5 @@ module.exports = {
     ], // allow grouped members
     'new-cap': ['error', { 'capIsNew': false }],
     'no-useless-constructor': 'off',
-    'comma-dangle': ['error', {
-      'arrays': 'always-multiline',
-      'objects': 'always-multiline',
-      'imports': 'only-multiline',
-      'exports': 'only-multiline',
-      'functions': 'never',
-    }],
-    'indent': [
-      'error', 2, {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-        ignoreComments: false,
-
-        CallExpression: {
-          arguments: 1,
-        },
-        FunctionDeclaration: {
-          body: 1,
-          parameters: 1,
-        },
-        FunctionExpression: {
-          body: 1,
-          parameters: 1,
-        },
-      },
-    ],
   },
 };
